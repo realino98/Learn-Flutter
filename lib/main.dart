@@ -22,25 +22,28 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Hello World'),
         ),
         body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    buttonName = "Clicked";
-                  });
-                },
-                child: Text(buttonName)),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    buttonName = "Clicked";
-                  });
-                },
-                child: Text(buttonName)),
-          ],
+            child: SizedBox(
+          width: 400,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      buttonName = "Clicked";
+                    });
+                  },
+                  child: Text(buttonName)),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      buttonName = "Clicked";
+                    });
+                  },
+                  child: Text(buttonName)),
+            ],
+          ),
         )),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
