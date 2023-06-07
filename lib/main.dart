@@ -23,14 +23,19 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Hello World'),
         ),
         body: Center(
-            child: SizedBox(
+            child: Container(
           width: double.infinity,
           height: double.infinity,
-          child: Row(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          color: Colors.red,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.red,
+                    primary: Colors.amber,
+                  ),
                   onPressed: () {
                     setState(() {
                       buttonName = "Clicked";
