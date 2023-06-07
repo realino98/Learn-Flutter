@@ -14,6 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String buttonName = "CLICK";
   int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,10 +24,11 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
             child: SizedBox(
-          width: 400,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
+          width: double.infinity,
+          height: double.infinity,
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ElevatedButton(
                   onPressed: () {
