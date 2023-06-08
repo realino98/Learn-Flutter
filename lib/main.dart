@@ -28,6 +28,7 @@ class MyAppExt extends StatefulWidget {
 class _MyAppExtState extends State<MyAppExt> {
   String buttonName = "CLICK";
   int currentIndex = 0;
+  bool _isClicked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +69,17 @@ class _MyAppExtState extends State<MyAppExt> {
                     ],
                   ),
                 )
-              : Image.asset('images/Background.jpeg')),
+              : GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isClicked = !_isClicked;
+                    });
+                  },
+                  child: _isClicked
+                      ? Image.asset('images/Background.jpeg')
+                      : Image.network(
+                          "https://imgv3.fotor.com/images/blog-cover-image/part-blurry-image.jpg"),
+                )),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
