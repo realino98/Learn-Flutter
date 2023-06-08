@@ -53,25 +53,19 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   )
-                : const SizedBox()),
+                : Image.asset('images/Background.jpeg')),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
               label: "Home",
               icon: Icon(
-                Icons.favorite,
-                color: Colors.pink,
-                size: 24.0,
-                semanticLabel: 'Text to announce in accessibility modes',
+                Icons.home,
               ),
             ),
             BottomNavigationBarItem(
               label: "Setting",
               icon: Icon(
-                Icons.favorite,
-                color: Colors.pink,
-                size: 24.0,
-                semanticLabel: 'Text to announce in accessibility modes',
+                Icons.settings,
               ),
             ),
           ],
